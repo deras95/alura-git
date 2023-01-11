@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+<h1>PROGRAMA PARA CALCULAR 	LOS PUNTOS DE UN EQUIPO DE FUTBOL</h1>
+<script>
+	function saltarLinea () {
+		document.write("<br><br>");
+	};
+	function imprimir(frase){
+		document.write(frase);
+		saltarLinea();
+	};
+	 
+	function resultadoPartido(){
+		const nombre = prompt("cual es el nombre del equipo?");
+		const victorias = parseInt(prompt("cuantas victorias obtuvo el equipo? "));
+		const derrotas = parseInt(prompt("cuantas derrotas obtuvo el equipo? "));
+		const empates = parseInt(prompt("cuantas empates obtuvo el equipo? "));
+		const puntosVictoria = victorias * 3;
+		const puntosDerrota = derrotas * 0;
+		//const puntosEmpate = empates * 1;
+		const partidosJugado = victorias+derrotas+empates;
+		const puntosTotales = puntosVictoria+puntosDerrota+empates;
+
+		imprimir("el equipo "+ nombre + " partipó en un total de " + partidosJugado + " partidos obteniendo " + victorias + " victorias, derrotas "+derrotas+" y "+empates+" empates dando como resultado un puntaje de "+puntosTotales+" puntos");
+
+		if (puntosTotales>=10) {imprimir("el equipo " + nombre + " se clasifico para los cuartos de final")} else {imprimir("el equipo " + nombre + " no se clasifico para los cuartos de final")};
+	};
+	resultadoPartido();
+</script>

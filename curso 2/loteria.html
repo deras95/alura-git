@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+
+<h1>LOTERIA </h1>
+
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");    
+        document.write("<br>");    
+        document.write("<br>");    
+    }  
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    function loteria(){
+    const numeroAleatorio = Math.round(Math.random()*10);
+    const numeroGanador = numeroAleatorio;
+    const numeroIngresado = parseInt(prompt("Ingrese su numero de loteria entre 0 y 10 "))
+
+    if (numeroGanador == numeroIngresado){
+        imprimir("su numero "+numeroIngresado+" ganó la loteria, felicidades ")
+    }
+
+    else {
+        imprimir("su numero "+numeroIngresado+" no fue seleccionado, lo sentimos ")    
+    }
+}
+loteria();
+</script>
